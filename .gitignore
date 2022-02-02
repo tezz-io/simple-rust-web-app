@@ -120,3 +120,5 @@ tmp
 
 # rust dist
 src/pkg
+src/crate
+dist-crate
