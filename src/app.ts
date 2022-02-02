@@ -1,5 +1,5 @@
 import "./styles/tailwind.css";
 import "./styles/style.scss";
 
-import { greet } from './pkg/rust';
+import { greet } from "./crate/core";
 greet();

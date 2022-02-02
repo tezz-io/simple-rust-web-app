@@ -8,8 +8,10 @@
     "scripts": {
         "build": "npm run build:rust && webpack --config webpack-develop.config.js",
         "build:release": "npm run build:rust:release && webpack --config webpack.config.js",
-        "build:rust": "wasm-pack build rust --dev -d ../src/pkg --out-name rust",
-        "build:rust:release": "wasm-pack build rust --release -d ../src/pkg --out-name rust",
+        "build:rust:pre": "mkdir -p src/crate",
+        "build:rust:cleanup": "rm -rf dist-crate",
+        "build:rust": "npm run build:rust:pre && wasm-pack build rust --dev -d ../dist-crate --out-name core && mv dist-crate/* src/crate/ && npm run build:rust:cleanup",
+        "build:rust:release": "npm run build:rust:pre && wasm-pack build rust --release -d ../dist-crate --out-name core && npm run build:rust:cleanup",
         "serve": "npm run build:rust && webpack-dev-server --config webpack-develop.config.js --no-hot --open"
     },
     "devDependencies": {

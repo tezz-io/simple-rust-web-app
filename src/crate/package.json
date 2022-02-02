@@ -1,0 +1,16 @@
+{
+  "name": "simple-rust-web-app",
+  "collaborators": [
+    "Lexikus"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "core_bg.wasm",
+    "core.js",
+    "core_bg.js",
+    "core.d.ts"
+  ],
+  "module": "core.js",
+  "types": "core.d.ts",
+  "sideEffects": false
+}
