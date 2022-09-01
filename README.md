@@ -1,4 +1,4 @@
-# Simpe rust web app
+# Simpe rust web app (HAHA)
 
 This project brings you up and running with a minimalistic setup to build any applications with TypeScript + Rust Wasm. It also supports Tailwind CSS.
 
